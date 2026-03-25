@@ -467,15 +467,69 @@ export const skillClusters = [
 ];
 
 export const education = [
-  "Postgraduate Degree in Visual Design and User Experience - IIT Hyderabad",
-  "Master's in Computer Science - MIT World Peace University, Pune",
-  "Bachelor in Computer Science - Sinhgad Institute of Technology & Science, Pune",
+  {
+    level: "Postgraduate",
+    program: "Visual Design and User Experience",
+    institution: "IIT Hyderabad",
+  },
+  {
+    level: "Master's",
+    program: "Computer Science",
+    institution: "MIT World Peace University",
+    location: "Pune",
+  },
+  {
+    level: "Bachelor's",
+    program: "Computer Science",
+    institution: "Sinhgad Institute of Technology & Science",
+    location: "Pune",
+  },
 ];
 
 export const certifications = [
-  "Visual Design and User Experience - IIT Hyderabad (2023)",
-  "React.js Essential Training - LinkedIn (2022)",
-  "User Experience Design Essentials - Adobe XD UI UX Design - Udemy (2021)",
+  {
+    title: "Visual Design and User Experience",
+    issuer: "IIT Hyderabad",
+    year: "2023",
+  },
+  {
+    title: "React.js Essential Training",
+    issuer: "LinkedIn Learning",
+    year: "2022",
+  },
+  {
+    title: "User Experience Design Essentials",
+    issuer: "Udemy",
+    note: "Adobe XD UI UX Design",
+    year: "2021",
+  },
+];
+
+export const proofPoints = [
+  {
+    category: "Recognition",
+    value: "2024",
+    label: "Client Satisfaction Award",
+    detail: "Recognized at CodeBlaze for delivery quality and client trust.",
+  },
+  {
+    category: "Impact",
+    value: "+68%",
+    label: "Customer satisfaction lift",
+    detail: "Delivered on a flagship SaaS redesign with measurable user confidence gains.",
+  },
+  {
+    category: "Conversion",
+    value: "+18%",
+    label: "Booking conversion lift",
+    detail: "Achieved for Sterling Resorts by improving decision clarity in the booking flow.",
+  },
+  {
+    category: "Efficiency",
+    value: "40%",
+    label: "Less repetitive design effort",
+    detail: "Reduced through reusable systems, consistent patterns, and tighter handoff quality.",
+  },
 ];
 
 export const domainExpertise = [

@@ -6,6 +6,7 @@ import {
   experienceTimeline,
   featuredProjects,
   impactMetrics,
+  proofPoints,
   profile,
   resumeDownloadUrl,
   skillClusters,
@@ -2296,6 +2297,27 @@ function CapabilitiesDomainSection() {
 }
 
 function CredentialsSection() {
+  const credentialHighlights = [
+    {
+      value: String(education.length).padStart(2, "0"),
+      label: "Academic Milestones",
+      detail: "Postgraduate to bachelor's grounding across design and computer science.",
+    },
+    {
+      value: String(certifications.length).padStart(2, "0"),
+      label: "Active Certifications",
+      detail: "Recent UX and frontend learning signals that keep craft current.",
+    },
+    {
+      value: proofPoints[0]?.value ?? "2024",
+      label: "Award Recognition",
+      detail: "Client-recognized delivery quality with measurable business outcomes.",
+    },
+  ];
+
+  const featuredRecognition = proofPoints[0];
+  const outcomeProofs = proofPoints.slice(1);
+
   return (
     <section id="credentials" data-header-tone="dark" className="relative border-b border-white/10 bg-[#080b0f] text-white">
       <div className="section-shell py-16 md:py-20">
@@ -2310,36 +2332,140 @@ function CredentialsSection() {
           <h2 className="mt-4 max-w-[15ch] font-heading text-[clamp(2.1rem,4.8vw,4.25rem)] font-medium leading-[0.95] tracking-[-0.046em]">
             Trusted by outcomes, backed by continuous learning.
           </h2>
+          <p className="mt-5 max-w-[60ch] text-[1rem] leading-[1.72] text-white/62">
+            A clearer snapshot of academic grounding, ongoing certifications, and the accomplishments that validate the work in real delivery settings.
+          </p>
         </motion.div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-3">
-          <motion.article whileHover={{ y: -2 }} transition={{ duration: 0.22 }} className="rounded-2xl border border-white/14 bg-white/[0.03] p-5">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Education</p>
-            <ul className="mt-4 space-y-2.5 text-[0.92rem] leading-[1.58] text-white/76">
-              {education.map((item) => (
-                <li key={item}>{item}</li>
+        <div className="mt-10 grid gap-4 md:grid-cols-3">
+          {credentialHighlights.map((item, index) => (
+            <motion.article
+              key={item.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.34, delay: index * 0.05 }}
+              whileHover={{ y: -2 }}
+              className="rounded-2xl border border-white/14 bg-white/[0.03] p-5"
+            >
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">{item.label}</p>
+              <p className="mt-4 font-heading text-[2.2rem] leading-none tracking-[-0.05em] text-white">{item.value}</p>
+              <p className="mt-3 text-[0.9rem] leading-[1.55] text-white/58">{item.detail}</p>
+            </motion.article>
+          ))}
+        </div>
+
+        <div className="mt-6 grid gap-4 xl:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)]">
+          <motion.article
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.38 }}
+            whileHover={{ y: -2 }}
+            className="rounded-[28px] border border-white/14 bg-[radial-gradient(circle_at_top_left,rgba(140,255,46,0.08),transparent_38%),rgba(255,255,255,0.03)] p-6 md:p-7"
+          >
+            <div className="flex flex-col gap-3 border-b border-white/10 pb-5 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Education</p>
+                <h3 className="mt-3 font-heading text-[clamp(1.65rem,2vw,2.2rem)] leading-[0.98] tracking-[-0.04em] text-white">
+                  Academic foundation built on design depth and technical rigor.
+                </h3>
+              </div>
+              <p className="max-w-[24ch] text-[0.84rem] leading-[1.6] text-white/48">
+                Structured to make degree level, specialization, and institution easier to scan at a glance.
+              </p>
+            </div>
+
+            <div className="mt-6 space-y-4">
+              {education.map((item, index) => (
+                <div key={`${item.level}-${item.program}`} className="rounded-2xl border border-white/10 bg-black/20 p-4 transition-colors duration-200 hover:border-white/18">
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">{item.level}</p>
+                      <h4 className="mt-2 font-heading text-[1.15rem] leading-[1.08] tracking-[-0.03em] text-white">{item.program}</h4>
+                    </div>
+                    <span className="rounded-full border border-white/12 bg-white/[0.04] px-3 py-1 text-[0.7rem] font-semibold uppercase tracking-[0.12em] text-white/54">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <p className="mt-3 text-[0.95rem] leading-[1.58] text-white/74">
+                    {item.institution}
+                    {item.location ? `, ${item.location}` : ""}
+                  </p>
+                </div>
               ))}
-            </ul>
+            </div>
           </motion.article>
 
-          <motion.article whileHover={{ y: -2 }} transition={{ duration: 0.22 }} className="rounded-2xl border border-white/14 bg-white/[0.03] p-5">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Certifications</p>
-            <ul className="mt-4 space-y-2.5 text-[0.92rem] leading-[1.58] text-white/76">
-              {certifications.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </motion.article>
+          <div className="space-y-4">
+            <motion.article
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.38, delay: 0.05 }}
+              whileHover={{ y: -2 }}
+              className="rounded-[28px] border border-white/14 bg-white/[0.03] p-6 md:p-7"
+            >
+              <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-5">
+                <div>
+                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Certifications</p>
+                  <h3 className="mt-3 font-heading text-[1.8rem] leading-[0.98] tracking-[-0.04em] text-white">
+                    Recent learning that stays close to execution.
+                  </h3>
+                </div>
+              </div>
 
-          <motion.article whileHover={{ y: -2 }} transition={{ duration: 0.22 }} className="rounded-2xl border border-white/14 bg-white/[0.03] p-5">
-            <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Proof Points</p>
-            <ul className="mt-4 space-y-2.5 text-[0.92rem] leading-[1.58] text-white/76">
-              <li>Client Satisfaction Award 2024 at CodeBlaze</li>
-              <li>+68% customer satisfaction lift on SaaS redesign</li>
-              <li>+18% booking conversion for Sterling Resorts</li>
-              <li>Reduced repetitive design effort by up to 40%</li>
-            </ul>
-          </motion.article>
+              <div className="mt-6 space-y-3">
+                {certifications.map((item) => (
+                  <div key={`${item.title}-${item.year}`} className="flex items-start gap-3 rounded-2xl border border-white/10 bg-black/20 p-4">
+                    <span className="rounded-full border border-[#8cff2e]/25 bg-[#8cff2e]/10 px-3 py-1 text-[0.72rem] font-semibold text-[#b9ff7e]">
+                      {item.year}
+                    </span>
+                    <div>
+                      <h4 className="text-[0.98rem] leading-[1.45] text-white">{item.title}</h4>
+                      <p className="mt-1 text-[0.85rem] leading-[1.55] text-white/58">
+                        {item.issuer}
+                        {item.note ? ` · ${item.note}` : ""}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+
+            <motion.article
+              initial={{ opacity: 0, y: 18 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.38, delay: 0.09 }}
+              whileHover={{ y: -2 }}
+              className="rounded-[28px] border border-white/14 bg-white/[0.03] p-6 md:p-7"
+            >
+              <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Accomplishments</p>
+
+              {featuredRecognition ? (
+                <div className="mt-5 rounded-2xl border border-[#8cff2e]/20 bg-[radial-gradient(circle_at_top_left,rgba(140,255,46,0.14),transparent_52%),rgba(255,255,255,0.03)] p-5">
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-[#d3ffad]">{featuredRecognition.category}</p>
+                  <div className="mt-3 flex items-end gap-3">
+                    <span className="font-heading text-[2.25rem] leading-none tracking-[-0.05em] text-white">{featuredRecognition.value}</span>
+                    <span className="pb-1 text-[0.95rem] leading-[1.45] text-white/78">{featuredRecognition.label}</span>
+                  </div>
+                  <p className="mt-3 max-w-[34ch] text-[0.9rem] leading-[1.6] text-white/62">{featuredRecognition.detail}</p>
+                </div>
+              ) : null}
+
+              <div className="mt-4 grid gap-3 sm:grid-cols-3 xl:grid-cols-1">
+                {outcomeProofs.map((item) => (
+                  <div key={`${item.category}-${item.value}`} className="rounded-2xl border border-white/10 bg-black/20 p-4">
+                    <p className="text-[0.68rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">{item.category}</p>
+                    <p className="mt-3 font-heading text-[1.85rem] leading-none tracking-[-0.05em] text-white">{item.value}</p>
+                    <p className="mt-2 text-[0.96rem] leading-[1.45] text-white/82">{item.label}</p>
+                    <p className="mt-2 text-[0.82rem] leading-[1.55] text-white/54">{item.detail}</p>
+                  </div>
+                ))}
+              </div>
+            </motion.article>
+          </div>
         </div>
       </div>
     </section>
