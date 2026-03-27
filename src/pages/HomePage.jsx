@@ -2329,7 +2329,7 @@ function CredentialsSection() {
           className="max-w-[760px]"
         >
           <p className="text-[0.8rem] uppercase tracking-[0.14em] text-[#8cff2e]">[ Credentials ]</p>
-          <h2 className="mt-4 max-w-[15ch] font-heading text-[clamp(2.1rem,4.8vw,4.25rem)] font-medium leading-[0.95] tracking-[-0.046em]">
+          <h2 className="mt-4 max-w-[15ch] font-heading text-[clamp(2.1rem,4.8vw,4.25rem)] font-medium leading-[1.02] tracking-[-0.046em]">
             Trusted by outcomes, backed by continuous learning.
           </h2>
           <p className="mt-5 max-w-[60ch] text-[1rem] leading-[1.72] text-white/62">
@@ -2367,7 +2367,7 @@ function CredentialsSection() {
             <div className="flex flex-col gap-3 border-b border-white/10 pb-5 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Education</p>
-                <h3 className="mt-3 font-heading text-[clamp(1.65rem,2vw,2.2rem)] leading-[0.98] tracking-[-0.04em] text-white">
+                <h3 className="mt-3 font-heading text-[clamp(1.65rem,2vw,2.2rem)] leading-[1.05] tracking-[-0.04em] text-white">
                   Academic foundation built on design depth and technical rigor.
                 </h3>
               </div>
@@ -2409,7 +2409,7 @@ function CredentialsSection() {
               <div className="flex items-end justify-between gap-4 border-b border-white/10 pb-5">
                 <div>
                   <p className="text-[0.72rem] font-semibold uppercase tracking-[0.13em] text-[#8cff2e]">Certifications</p>
-                  <h3 className="mt-3 font-heading text-[1.8rem] leading-[0.98] tracking-[-0.04em] text-white">
+                  <h3 className="mt-3 font-heading text-[1.8rem] leading-[1.05] tracking-[-0.04em] text-white">
                     Recent learning that stays close to execution.
                   </h3>
                 </div>
@@ -2484,7 +2484,7 @@ function HiringCtaSection() {
           className="rounded-[28px] border border-white/12 bg-[radial-gradient(circle_at_20%_20%,rgba(140,255,46,0.12),transparent_45%),#0d1218] px-6 py-8 md:px-10 md:py-10"
         >
           <p className="text-[0.8rem] uppercase tracking-[0.15em] text-[#8cff2e]">[ Hiring CTA ]</p>
-          <h2 className="mt-4 max-w-[13ch] font-heading text-[clamp(2.2rem,5.2vw,4.7rem)] font-medium leading-[0.93] tracking-[-0.05em]">
+          <h2 className="mt-4 max-w-[13ch] font-heading text-[clamp(2.2rem,5.2vw,4.7rem)] font-medium leading-[1.01] tracking-[-0.05em]">
             Open to Lead UI/UX and product design leadership roles.
           </h2>
           <p className="mt-5 max-w-[62ch] text-[1rem] leading-[1.72] text-white/64">
@@ -2649,7 +2649,7 @@ export default function HomePage() {
             className="max-w-[24ch] text-left"
           >
             <p className="text-[0.82rem] uppercase tracking-[0.14em] text-[#8cff2e]">{`{ Selected Work }`}</p>
-            <h2 className="mt-5 font-heading text-[clamp(2.8rem,6.8vw,5.9rem)] font-medium leading-[0.94] tracking-[-0.05em]">
+            <h2 className="mt-5 font-heading text-[clamp(2.8rem,6.8vw,5.9rem)] font-medium leading-[1.02] tracking-[-0.05em]">
               <span className="block md:whitespace-nowrap">Product design with</span>
               <span className="block md:whitespace-nowrap">measurable business impact</span>
             </h2>
@@ -2761,7 +2761,7 @@ export default function HomePage() {
             className="max-w-5xl"
           >
             <p className="text-[0.8rem] uppercase tracking-[0.14em] text-[#65666d]">[ About & Contact ]</p>
-            <h2 className="mt-4 max-w-[11.8ch] font-heading text-[clamp(2.7rem,6.2vw,6rem)] font-medium leading-[0.92] tracking-[-0.052em] text-[#2f3137]">
+            <h2 className="mt-4 max-w-[11.8ch] font-heading text-[clamp(2.7rem,6.2vw,6rem)] font-medium leading-[1.02] tracking-[-0.052em] text-[#2f3137]">
               Let’s build meaningful products with systems-level clarity
             </h2>
           </motion.div>
