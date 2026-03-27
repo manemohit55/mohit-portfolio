@@ -2484,7 +2484,7 @@ function HiringCtaSection() {
           className="rounded-[28px] border border-white/12 bg-[radial-gradient(circle_at_20%_20%,rgba(140,255,46,0.12),transparent_45%),#0d1218] px-6 py-8 md:px-10 md:py-10"
         >
           <p className="text-[0.8rem] uppercase tracking-[0.15em] text-[#8cff2e]">[ Hiring CTA ]</p>
-          <h2 className="mt-4 max-w-[13ch] font-heading text-[clamp(2.2rem,5.2vw,4.7rem)] font-medium leading-[1.01] tracking-[-0.05em]">
+          <h2 className="mt-4 max-w-[13ch] font-heading text-[clamp(2.2rem,5.2vw,4.7rem)] font-medium leading-[1.08] tracking-[-0.05em]">
             Open to Lead UI/UX and product design leadership roles.
           </h2>
           <p className="mt-5 max-w-[62ch] text-[1rem] leading-[1.72] text-white/64">
