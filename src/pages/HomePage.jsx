@@ -2503,7 +2503,7 @@ function HiringCtaSection() {
             <motion.a
               href={gmailComposeUrl}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
               whileHover={{ y: -2 }}
               className="inline-flex items-center justify-center rounded-full border border-white/16 bg-white/6 px-5 py-2.5 text-[0.95rem] font-medium text-white transition-colors duration-200 hover:bg-white/12"
             >
@@ -2579,7 +2579,7 @@ export default function HomePage() {
               <a
                 href={profile.linkedin}
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="inline-flex items-center rounded-full border border-[#d7dbe2] bg-[#f3f4f7] px-6 py-3 text-[0.98rem] font-medium text-[#3a3e46] transition-colors duration-200 hover:bg-white hover:text-[#111]"
               >
                 LinkedIn
@@ -2810,7 +2810,7 @@ export default function HomePage() {
 
           <p>Copyright © Product Design & UX Systems, {new Date().getFullYear()}</p>
 
-          <a href={profile.linkedin} target="_blank" rel="noreferrer" className="text-white/72 transition-colors duration-200 hover:text-white">
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-white/72 transition-colors duration-200 hover:text-white">
             Created by {profile.name}
           </a>
         </div>
@@ -2867,7 +2867,7 @@ export default function HomePage() {
                       <a
                         href={gmailComposeUrl}
                         target="_blank"
-                        rel="noreferrer"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center justify-center rounded-full border border-white/16 bg-white/6 px-5 py-2.5 text-[0.95rem] font-medium text-white transition-colors duration-200 hover:bg-white/12"
                       >
                         Email me
